@@ -1,0 +1,46 @@
+.responsive {
+  width: 100%;
+  height: auto;
+  /*width: 40%;
+  height: 10%*/
+}
+#btnAdicionarProduto:hover {
+  color: #fff;
+  background-color: #23272b !important;
+  border-color: #1d2124 !important;
+}
+
+.photo img {
+  width: 100px;
+  height: 100px;
+  transition: all 1s;
+}
+
+.holder {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.fixeddiv {
+  width: 399px;
+  height: 300px;
+  border: 1px solid blue;
+  display: none;
+  position: absolute;
+  top: 32%;
+  left: 30%;
+  transform: scale(1.5);
+}
+
+.photo:hover .fixeddiv {
+  display: block;
+}
+
+  .photo:hover .fixeddiv img {
+    display: block;
+    width: 200px;
+    height: 200px;
+  }

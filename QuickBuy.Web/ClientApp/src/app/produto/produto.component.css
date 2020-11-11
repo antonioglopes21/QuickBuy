@@ -1,0 +1,71 @@
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "Selecionar";
+}
+
+.custom-file-label::after {
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+  .titulo {
+  color: white;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+.valid-feedback {
+  display: block;
+}
+.button-gradient:hover {
+  background: linear-gradient(to left, #005bea, #00c6fb);
+  transition: all 0.4s;
+  border-color: transparent;
+}
+
+.button-gradient{
+  background-color: black;
+  transition: all 0.4s;
+  border-color: black;
+}
+
+.button-gradient2:hover {
+  background: black;
+  border-color: black;
+  color: white;
+}
+
+.background {
+  height: calc(100vh - 57px);
+}
+.form-control {
+  border-radius: 1.25rem !important;
+}
+
+.panel {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  position: relative;
+}
+
+
+.custom-file-label {
+  border-radius: 2.25rem;
+}
+
+  @media screen and (max-width:1920px) and (min-width:1367px) {
+    .panel {
+      width: 100%;
+      padding: 15px;
+      margin: auto;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width:525px) {
+    .panel {
+      width: 100%;
+      padding: 15px;
+      margin: auto;
+    }
+  }

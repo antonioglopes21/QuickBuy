@@ -31,7 +31,9 @@
 }
 
 body, html {
-	font-family: Montserrat-Regular, sans-serif;
+  font-family: Montserrat-Regular, sans-serif;
+  background: linear-gradient(to bottom, #005bea, #00c6fb);
+  opacity: 0.9;
 }
 
 /*---------------------------------------------*/
@@ -101,7 +103,7 @@ textarea:-ms-input-placeholder { color: #999999; }
 .txt1 {
   font-family: Montserrat-Regular;
   font-size: 16px;
-  color: #cccccc;
+  color: #333333;
   line-height: 1.4;
 }
 

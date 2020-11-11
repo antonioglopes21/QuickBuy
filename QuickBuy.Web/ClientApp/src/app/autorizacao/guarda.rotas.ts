@@ -10,7 +10,7 @@ export class GuardaRotas implements CanActivate {
   constructor(private router: Router, private usuarioServico: UsuarioServico) {
 
   }
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | import("rxjs").Observable<boolean> | Promise<boolean> {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     if (this.usuarioServico.usuario_autenticado()) {
       return true;

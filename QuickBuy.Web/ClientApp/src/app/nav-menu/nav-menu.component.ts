@@ -22,6 +22,10 @@ export class NavMenuComponent {
     this.router.navigate(['/']);
   }
 
+  get usuario() {
+    return this.usuarioServico.usuario;
+  }
+
   collapse() {
     this.isExpanded = false;
   }
