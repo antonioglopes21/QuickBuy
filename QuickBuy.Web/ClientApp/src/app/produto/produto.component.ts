@@ -10,8 +10,8 @@ import { Router } from "@angular/router";
 })
 export class ProdutoComponent implements OnInit {
   public produto: Produto;
-  private ativar_spinner: boolean;
-  private nomeArquivoVazio: boolean;
+  public ativar_spinner: boolean;
+  public nomeArquivoVazio: boolean;
   public mensagem: string;
   public arquivoSelecionado: File;
 

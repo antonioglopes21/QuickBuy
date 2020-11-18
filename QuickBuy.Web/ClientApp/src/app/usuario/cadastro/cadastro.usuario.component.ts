@@ -12,7 +12,7 @@ import { ConsultaCepService } from "../../servicos/cep/consulta.cep.servico";
 export
   class CadastroUsuarioComponent implements OnInit {
   public usuario: Usuario;
-  private ativar_spinner: boolean;
+  public ativar_spinner: boolean;
   public mensagem: string;
   public usuarioCadastrado: boolean;
 
