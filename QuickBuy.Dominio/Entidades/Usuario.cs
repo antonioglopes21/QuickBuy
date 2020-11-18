@@ -9,6 +9,12 @@ namespace QuickBuy.Dominio.Entidades
         public string Senha { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
+        public string CEP { get; set; }
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
+        public string Bairro { get; set; }
+        public string EnderecoCompleto { get; set; }
+        public int NumeroEndereco { get; set; }
 
         public virtual ICollection<Pedido> Pedidos { get; set; }
 

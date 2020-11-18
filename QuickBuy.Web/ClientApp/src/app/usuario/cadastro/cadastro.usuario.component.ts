@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Usuario } from "../../modelo/usuario";
 import { UsuarioServico } from "../../servicos/usuario/usuario.servico";
+import { ConsultaCepService } from "../../servicos/cep/consulta.cep.servico";
 
 @Component({
   selector: "cadastro-usuario",
@@ -15,7 +16,7 @@ export
   public mensagem: string;
   public usuarioCadastrado: boolean;
 
-  constructor(private usuarioServico: UsuarioServico) {
+  constructor(private usuarioServico: UsuarioServico, private cepService: ConsultaCepService) {
 
   }
 
@@ -37,5 +38,42 @@ export
           this.ativar_spinner = false;
         }
       );
+  }
+
+  consultaCEP(cep, form) {
+    // Nova variável "cep" somente com dígitos.
+    cep = cep.replace(/\D/g, '');
+    if (cep != null && cep !== '') {
+      this.cepService.consultaCEP(cep)
+        .subscribe(dados => {
+          this.populaDadosForm(dados, form);
+          console.log(JSON.parse(dados.toString()));
+          console.log(dados);
+        });
+    }
+  }
+  populaDadosForm(dados, formulario) {
+    /*formulario.setValue({
+      nome: formulario.value.nome,
+      email: formulario.value.email,
+      endereco: {
+        rua: dados.logradouro,
+        cep: dados.cep,
+        numero: '',
+        complemento: dados.complemento,
+        bairro: dados.bairro,
+        cidade: dados.localidade,
+        estado: dados.uf
+      }
+    });*/
+
+    formulario.form.patchValue({
+      estado: dados.uf,
+      cidade: dados.localidade,
+      bairro: dados.bairro,
+      endereco: dados.logradouro
+    });
+
+    // console.log(form);
   }
 }

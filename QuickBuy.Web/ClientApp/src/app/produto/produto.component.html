@@ -72,9 +72,10 @@
       <div class="col-md-8" style="position: relative;">
         <div class="input-group mb-2">
           <div class="custom-file col-md-12">
-            <input type="file" class="custom-file-input" id="inputFile" (change)="inputChange($event.target.files)" [(ngModel)]="produto.nomeArquivo" #nomeArquivo="ngModel" />
-            <label for="inputFile" class="custom-file-label" *ngIf="!nomeArquivoVazio" >Escolha uma foto</label>
-            <label for="inputFile" class="custom-file-label" *ngIf="nomeArquivoVazio">{{produto.nomeArquivo}}</label>
+            <input type="file" class="custom-file-input" placeholder="Escolha uma foto" id="inputFile" (change)="inputChange($event.target.files)"/>
+            <label for="inputFile" class="custom-file-label" [(ngModel)]="produto.nomeArquivo" #nomeArquivo="ngModel">{{produto.nomeArquivo}}</label>
+            <!--<label for="inputFile" class="custom-file-label" *ngIf="!nomeArquivoVazio" >Escolha uma foto</label>
+            <label for="inputFile" class="custom-file-label" *ngIf="nomeArquivoVazio">{{produto.nomeArquivo}}</label>-->
           </div>
         </div>
       </div>
