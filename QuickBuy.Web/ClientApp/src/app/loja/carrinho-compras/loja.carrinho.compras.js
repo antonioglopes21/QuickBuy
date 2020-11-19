@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LojaCarrinhoCompras = void 0;
 var LojaCarrinhoCompras = /** @class */ (function () {
     function LojaCarrinhoCompras() {
         this.produtos = [];

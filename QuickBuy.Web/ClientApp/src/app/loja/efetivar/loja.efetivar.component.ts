@@ -54,7 +54,7 @@ export class LojaEfetivarComponent implements OnInit {
     this.atualizarTotal();
 
     var itens = this.carrinhoCompras.temItensCarrinhoCompras();
-    if (itens)
+    if (!itens)
       this.router.navigate(["/"]);
   }
   public atualizarTotal() {
